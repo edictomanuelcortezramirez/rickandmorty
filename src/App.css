@@ -1,0 +1,393 @@
+.App {
+  text-align: center;
+  background-color: #181818;
+}
+
+#root {
+  background-color: #181818;
+}
+
+/* ---------------------------FOnts--------------------------- */
+@font-face {
+  font-family: Effort;
+  src: url(/src/assets/Effort.ttf);
+}
+
+/* ---------------------------NAvbar--------------------------- */
+.navbar {
+  background-color: #181818;
+  padding: 0;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-link {
+  color: #ff79c6;
+  font-family: Effort;
+  font-size: 20px;
+  margin: 0 20px 0 0;
+}
+
+.nav-item :hover {
+  color: #47e884;
+}
+
+/* ---------------------------HOme--------------------------- */
+.home {
+  background-color: #181818;
+  height: 55em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home img {
+  width: 30em;
+}
+
+.menu {
+  font-family: Effort;
+  font-size: 20px;
+  margin: 20px 0 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu span {
+  margin-top: 5px;
+}
+
+.menu a {
+  font-family: Effort;
+  text-decoration: none;
+  color: #47e884;
+}
+
+.icon {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  width: 1px;
+  height: 50px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: initial;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menu .tooltip {
+  position: absolute;
+  right: 79px;
+  font-size: 14px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.menu .tooltip::before {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  bottom: -3px;
+  right: 100%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+.menu .icon:hover .tooltip {
+  left: -125px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menu .icon:hover span,
+.menu .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.menu .brand:hover {
+  background: #181818;
+  color: #ff79c6;
+}
+
+.menu .brand:hover .tooltip,
+.menu .brand:hover .tooltip::before {
+  background: transparent;
+  color: #ff79c6;
+}
+
+.tooltip img {
+  width: 50px;
+}
+
+/* ---------------------------CHaracters--------------------------- */
+label {
+  color: #47e884;
+}
+
+.form-control::placeholder {
+  color: #ff79c6;
+}
+
+.form-control {
+  color: #ff79c6;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 0 40px 0;
+}
+
+.card {
+  max-width: 540px;
+  margin: 15px;
+}
+
+.dash {
+  color: #ff79c6;
+  font-size: 20px;
+  vertical-align: baseline;
+}
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 15px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  /* background: #3085a3; */
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+figure.effect {
+  background: #030c17;
+}
+
+figure.effect img {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.effect figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale3d(1.4, 1.4, 1);
+  transform: scale3d(1.4, 1.4, 1);
+}
+
+figure.effect h2 {
+  margin: 10% 0 10px 0;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect p {
+  padding: 0.1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+figure.effect:hover h2 {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+figure.effect:hover figcaption::before,
+figure.effect:hover p {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+figure.effect:hover figcaption {
+  background-color: rgba(58, 52, 42, 0);
+}
+
+figure.effect:hover img {
+  opacity: 0.4;
+}
+
+.empty {
+  font-size: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  list-style: none;
+}
+
+.empty :hover {
+  color: #ffff01;
+}
+
+.full {
+  font-size: 30px;
+  color: #ffff01;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* ---------------------------COntact--------------------------- */
+.contact {
+  background-color: #ffffff;
+}
+
+.contact img {
+  width: 110px;
+  float: left;
+}
+
+.contact p {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 29.25px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.info {
+  margin: 35px;
+}
+
+.contact a {
+  color: #ff79c6;
+}
+
+.medias {
+  margin: 35px;
+}
+
+/* ---------------------------FOoter--------------------------- */
+/* .footer {
+  background-color: #181818;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px 0 5px 0;
+  text-align: center;
+} */
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background: #181818;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 5x;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  border: transparent;
+}
